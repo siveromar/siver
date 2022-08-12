@@ -15,54 +15,35 @@ const {
   These are all the elements we will look for.
    ===================
 */
-const getHeader = document.querySelectorAll("header"),
-  getH1 = document.querySelectorAll("h1"),
-  getSiteHeader = document.querySelectorAll(".c-site-header"),
-  getAria = document.querySelectorAll('nav[aria-label="Main Site Links."]'),
-  getMain = document.querySelectorAll("main"),
-  getFooter = document.querySelectorAll("footer"),
-  getSiteFooter = document.querySelectorAll(".c-site-footer"),
-  getIFrame = document.querySelectorAll("iframe"),
-  getImage = document.querySelectorAll("img"),
-  getWords = document.body.innerText;
 
-/* =================
-   ASSERTIONS 
-   These are the things we check are true about your page.
-   Read and update your HTML to discover the requirements.
-   The tests will run every time you update your code.
-   ===================
-*/
-test("There is at least one header element", () => {
-  expect(getHeader.length).toBeGreaterThanOrEqual(1);
-});
-test("There is at least one h1", () => {
-  expect(getH1.length).toBeGreaterThanOrEqual(1);
-});
-test("There is only one header element with the class c-site-header", () => {
-  expect(getSiteHeader.length).toBe(1);
-});
-test("There is a nav element with an aria-label of Main Site Links.", () => {
-  expect(getAria.length).toBeGreaterThanOrEqual(1);
-});
-test("There is only one main element", () => {
-  expect(getMain.length).toBe(1);
-});
-test("There is at least one footer element", () => {
-  expect(getFooter.length).toBeGreaterThanOrEqual(1);
-});
-test("There is only one footer element with the class c-site-footer", () => {
-  expect(getSiteFooter.length).toBe(1);
-});
-test("There is embedded video", () => {
-  expect(getIFrame.length).toBeGreaterThanOrEqual(1);
-});
-test("There is at least one image", () => {
-  expect(getImage.length).toBeGreaterThanOrEqual(1);
-});
-test("There are at least 500 words on the page", () => {
-  expect(getWords.length).toBeGreaterThanOrEqual(500);
+var natural_phenomena, image;
+
+
+natural_phenomena = ['https://www.thefactsite.com/wp-content/uploads/2009/11/rainbow.jpg', 'https://www.light2015.org/.imaging/stk/pop/content/dam/LearnAboutLight/LightInNature/NorthenLights/jcr:content/NorthenLights.2014-07-17-18-31-38.png', 'https://www.ecmwf.int/sites/default/files/ThinkstockPhotos-Lightning-146914924-690px.jpg'];
+let element_exhibition_cyf = document.getElementById('exhibition-cyf');
+image = natural_phenomena.shift();
+element_exhibition_cyf.setAttribute("src", image);
+natural_phenomena.push(image);
+
+
+document.getElementById('next-img-cyf').addEventListener('click', (event) => {
+  let element_exhibition_cyf2 = document.getElementById('exhibition-cyf');
+  image = natural_phenomena.shift();
+  element_exhibition_cyf2.setAttribute("src", image);
+  natural_phenomena.push(image);
+
 });
 
-const console = document.getElementById("tests");
-prettify.toHTML(run(), console);
+document.getElementById('previous-img-cyf').addEventListener('click', (event) => {
+  let element_exhibition_cyf3 = document.getElementById('exhibition-cyf');
+  element_exhibition_cyf3.setAttribute("src", image);
+  image = natural_phenomena.pop();
+  natural_phenomena.unshift(image);
+
+});
+
+
+
+
+
+

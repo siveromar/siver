@@ -97,6 +97,8 @@ nav, li {
     text-align: justify;
     padding: 15rem 2rem;
     align-items: center;
+    position:relative;
+    top:-40ch;
    
 }
 .about-text {
@@ -129,19 +131,72 @@ projects-section {
  
     padding:10rem 2rem;
 }
+#previous-img-cyf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    left: 64ch;
+    top:370ch;
+}
+#p-cyf{
+    font-size: 40px;
+    font-weight: 700;
+    color: blue;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    border-bottom: 0.1rem solid blue;
+    position: absolute;
+    left:30ch;
+    top:120ch;
+}
+#exhibition-cyf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300;
+    height:300;
+    position: absolute;
+    left: 42ch;
+    top:170ch;
+}
+#next-img-cyf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    left: 180ch;
+    top:370ch;
+    
+}
 .projects-section-header {
     max-width: 700px;
+    position:relative;
+    top:50ch;
     margin: 2rem auto 3rem auto;
-    border-bottom: 0.2rem solid blue;
+    border-bottom: 0.1rem solid blue;
 }
 .project-lists{
     margin-bottom:15px;
 }
 iframe{
   position:relative;
-  left:700px;
+  top:60ch;
+  left:630px;
+  width: 33vw;
+  height: 20vw;
+
 }
 .c-site-footer{
+  position: relative;
+  bottom: -70ch;
   background-color:white;
   text-align:center;
+  
 }
